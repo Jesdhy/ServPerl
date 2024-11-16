@@ -1,8 +1,6 @@
 [phases.setup]
 cmds = [
-    "apt-get update -y",                      
-    "apt-get install -y build-essential perl",  
-    "cpan HTTP::Server::Simple::CGI"         
+   cpanm HTTP::Server::Simple::CGI        
 ]
 
 [phases.build]
