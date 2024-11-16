@@ -1,9 +1,0 @@
-[phases]
-
-setup = "cpan Carton && carton install"
-
-start = "carton exec perl app.pl daemon -l http://0.0.0.0:$PORT"
-
-[variables]
-
-PORT = "3000"
