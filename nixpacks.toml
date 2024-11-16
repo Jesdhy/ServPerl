@@ -1,6 +1,8 @@
 [phases.setup]
 cmds = [
-    "cpan HTTP::Server::Brick" # Instala el módulo HTTP::Server::Brick
+   "apt-get update -y",                     
+    "apt-get install -y build-essential perl", 
+    "cpan HTTP::Server::Brick"   
 ]
 
 [phases.build]
@@ -8,4 +10,3 @@ cmds = []
 
 [phases.start]
 cmd = "perl -MHTTP::Server::Brick -e 'HTTP::Server::Brick->new(port => $PORT)->mount(\"/\" => {path => \"index.pl\"})->start'"
-
