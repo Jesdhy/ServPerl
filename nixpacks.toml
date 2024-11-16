@@ -1,5 +1,12 @@
-[phases]
-setup = "echo 'Perl environment ready'"
+[phases.setup]
+# La fase de setup aquí no hace nada porque Perl no requiere instalación adicional en este caso
+cmds = []
 
-[variables]
-PORT = "5000"
+[phases.build]
+# No es necesario compilar nada, así que no hacemos nada aquí tampoco
+cmds = []
+
+[phases.start]
+# Comando para iniciar tu servidor Perl
+cmd = "perl -MHTTP::Server::Brick -e 'HTTP::Server::Brick->new(port => $PORT)->mount(\"/\" => {path => \"index.pl\"})->start'"
+
