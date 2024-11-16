@@ -1,6 +1,6 @@
 [phases.setup]
 cmds = [
-   cpanm HTTP::Server::Simple::CGI        
+   "cpan HTTP::Server::Simple::CGI"        
 ]
 
 [phases.build]
