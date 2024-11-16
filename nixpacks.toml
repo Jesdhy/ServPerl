@@ -1,12 +1,11 @@
 [phases.setup]
-# La fase de setup aquí no hace nada porque Perl no requiere instalación adicional en este caso
-cmds = []
+cmds = [
+    "cpan HTTP::Server::Brick" # Instala el módulo HTTP::Server::Brick
+]
 
 [phases.build]
-# No es necesario compilar nada, así que no hacemos nada aquí tampoco
 cmds = []
 
 [phases.start]
-# Comando para iniciar tu servidor Perl
 cmd = "perl -MHTTP::Server::Brick -e 'HTTP::Server::Brick->new(port => $PORT)->mount(\"/\" => {path => \"index.pl\"})->start'"
 
