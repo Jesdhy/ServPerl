@@ -1,0 +1,5 @@
+[phases]
+setup = "echo 'Perl environment ready'"
+
+[variables]
+PORT = "5000"
